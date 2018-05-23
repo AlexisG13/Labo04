@@ -83,14 +83,14 @@ public class Ventana extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 factory = FactoryProducer.getFactory("Aritmetica");
-                Aritmetico suma = factory.getAritmetico("Resta");
+                Aritmetico resta = factory.getAritmetico("Resta");
                 float x, num1,num2;
                 String conversor,num1S,num2S;
                 num1S=caja1.getText(); 
                 num2S=caja2.getText();
                 num1=Float.parseFloat(num1S);
                 num2=Float.parseFloat(num2S);
-                x=suma.operacion(num1, num2);
+                x=resta.operacion(num1, num2);
                 conversor=String.valueOf(x);
                 caja3.setText(conversor);  
             }
@@ -99,14 +99,14 @@ public class Ventana extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 factory = FactoryProducer.getFactory("Aritmetica");
-                Aritmetico suma = factory.getAritmetico("Division");
+                Aritmetico dividir = factory.getAritmetico("Division");
                 float x, num1,num2;
                 String conversor,num1S,num2S;
                 num1S=caja1.getText(); 
                 num2S=caja2.getText();
                 num1=Float.parseFloat(num1S);
                 num2=Float.parseFloat(num2S);
-                x=suma.operacion(num1, num2);
+                x=dividir.operacion(num1, num2);
                 conversor=String.valueOf(x);
                 caja3.setText(conversor);  
             }
@@ -116,14 +116,14 @@ public class Ventana extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 factory = FactoryProducer.getFactory("Aritmetica");
-                Aritmetico suma = factory.getAritmetico("Multiplicacion");
+                Aritmetico multiplicar = factory.getAritmetico("Multiplicacion");
                 float x, num1,num2;
                 String conversor,num1S,num2S;
                 num1S=caja1.getText(); 
                 num2S=caja2.getText();
                 num1=Float.parseFloat(num1S);
                 num2=Float.parseFloat(num2S);
-                x=suma.operacion(num1, num2);
+                x=multiplicar.operacion(num1, num2);
                 conversor=String.valueOf(x);
                 caja3.setText(conversor);  
             }
@@ -132,12 +132,12 @@ public class Ventana extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 factory = FactoryProducer.getFactory("Conversor");
-                Conversor suma = factory.getConversor("Binario");
+                Conversor binario = factory.getConversor("Binario");
                 int x, num1,num2;
                 String conversor,num1S,num2S;
                 num1S=caja1.getText(); 
                 num1=Integer.parseInt(num1S);
-                x=suma.operacion(num1);
+                x=binario.operacion(num1);
                 conversor=String.valueOf(x);
                 caja3.setText(conversor);  
             }
@@ -146,12 +146,12 @@ public class Ventana extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 factory = FactoryProducer.getFactory("Conversor");
-                Conversor suma = factory.getConversor("Hexadecimal");
+                Conversor hex = factory.getConversor("Hexadecimal");
                 int num1;
                 String conversor,num1S,resultado;
                 num1S=caja1.getText(); 
                 num1=Integer.parseInt(num1S);
-                resultado=suma.operacion2(num1);
+                resultado=hex.operacion2(num1);
                 caja3.setText(resultado);  
             }
         });
