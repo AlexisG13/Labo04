@@ -6,6 +6,12 @@
 package AbstractFactory;
 
 import AbstractFactory.AbstractFactory;
+import Aritmetico.Aritmetico;
+import Aritmetico.Division;
+import Aritmetico.Multiplicacion;
+import Aritmetico.Resta;
+import Aritmetico.Suma;
+import Conversor.Conversor;
 
 /**
  *
@@ -13,10 +19,22 @@ import AbstractFactory.AbstractFactory;
  */
 public class FactAritmetico implements AbstractFactory {
     @Override
-    public int getNum1(int x){
-        return x;
-    };
-    public int getNum2(int y){
-        return y;
-    };
-}
+    public Conversor getConversor(String tipo){
+        return null;
+    }
+    @Override
+    public Aritmetico getAritmetico(String tipo){
+        switch(tipo){
+            case "Suma":
+                return new Suma();
+            case "Resta":
+                return new Resta();
+            case "Multiplicacion":
+                return new Multiplicacion();
+            case "Division":
+                return new Division();
+        }
+        return null;
+        }
+    }
+

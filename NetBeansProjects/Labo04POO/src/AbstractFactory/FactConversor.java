@@ -5,16 +5,29 @@
  */
 package AbstractFactory;
 
+import Aritmetico.Aritmetico;
+import Conversor.Binario;
+import Conversor.Conversor;
+import Conversor.Hexadecimal;
+
 /**
  *
  * @author uca
  */
 public class FactConversor implements AbstractFactory{
     @Override
-    public int getNum1(int x){
-        return x;
-    };
-    public int getNum2(int y){
-        return y;
-    };
+    public Aritmetico getAritmetico(String tipo){
+        return null;
+    }
+    @Override
+    public Conversor getConversor(String tipo){
+        switch(tipo){
+            case "Binario":
+                return new Binario();
+            case "Hexadecimal":
+                return new Hexadecimal();
+        }
+        return null;
+        }
+    
 }

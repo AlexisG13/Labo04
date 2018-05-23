@@ -10,11 +10,11 @@ package AbstractFactory;
  * @author uca
  */
 public class FactoryProducer {
-    public static AbstractFactory getFactory(int tipo){
+    public static AbstractFactory getFactory(String tipo){
         switch(tipo){
-            case 1:
+            case "Aritmetica":
                 return new FactAritmetico();
-            case 2:
+            case "Conversor":
                 return new FactConversor();
         }
         return null;

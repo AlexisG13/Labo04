@@ -10,5 +10,6 @@ package Conversor;
  * @author uca
  */
 public interface Conversor {
-    float operacion(int x,int y);
+    int operacion(int x);
+    String operacion2(int x);
 }

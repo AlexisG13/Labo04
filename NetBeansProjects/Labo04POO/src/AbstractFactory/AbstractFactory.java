@@ -5,11 +5,14 @@
  */
 package AbstractFactory;
 
+import Aritmetico.Aritmetico;
+import Conversor.Conversor;
+
 /**
  *
  * @author uca
  */
 public interface AbstractFactory {
-    int getNum1(int x);
-    int getNum2(int y);
+    Aritmetico getAritmetico(String tipo);
+    Conversor getConversor(String tipo);
 }

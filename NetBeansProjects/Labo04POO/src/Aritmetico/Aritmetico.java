@@ -12,5 +12,5 @@ import AbstractFactory.AbstractFactory;
  * @author uca
  */
 public interface Aritmetico{
-    float operacion(int x,int y);
+    float operacion(float x,float y);
 }

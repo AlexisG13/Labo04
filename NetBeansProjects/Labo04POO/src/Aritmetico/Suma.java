@@ -11,7 +11,7 @@ package Aritmetico;
  */
 public class Suma implements Aritmetico{
     @Override
-    public float operacion(int x,int y){
+    public float operacion(float x,float y){
         float z;
         z = x+y;
         return z;
